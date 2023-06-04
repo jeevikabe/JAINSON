@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Webpage Design</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+        <div class="navbar">
+            <div class="icon">
+                <h2 class="logo">JainSon Lift</h2>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="home.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="service.html">SERVICE</a></li>
+                    <li><a href="design.html">DESIGN</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+
+            <form action="home.html">
+            <div class="Search",align="right">
+                <input class="srch" name="" placeholder="JAINSON LIFT">
+                <a href="#"><button class="btn">Search</button></a>
+            </div>
+            </form>
+        
+              
+             
+
+
+
+        </div>
+        <div class="form">
+            <h2>Login Here</h2>
+            
+            <form action="contact.html" onsubmit="return validateForm()">
+                <input type="email" required name="email" id="email" placeholder="Enter Email Here">
+                <input type="password" required name="password" id="password" placeholder="Enter Password Here">
+                <button class="btnn" type="submit">Login</button>
+              </form>
+              
+              <script>
+                function validateForm() {
+                  var emailInput = document.getElementById("email");
+                  var passwordInput = document.getElementById("password");
+              
+                  // Email validation using regular expression
+                  var emailRegex = /^\S+@\S+\.\S+$/;
+                  if (!emailRegex.test(emailInput.value)) {
+                    alert("Please enter a valid email address.");
+                    return false; // Prevent form submission
+                  }
+              
+                  // Password length validation
+                  if (passwordInput.value.length < 6) {
+                    alert("Password should be at least 6 characters long.");
+                    return false; // Prevent form submission
+                  }
+              
+                  // If all validations pass, the form will be submitted
+                  return true;
+                }
+              </script>
+              
+
+            <p class="link">Don't have an account<br>
+            <a href="#">Sign up </a> Here</a></p>
+            <p class="liw">Log in with</p>
+            <div class="icon">
+               <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+               <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+               <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+               <a href="#"><ion-icon name="logo-google"></ion-icon></a>
+               <a href="#"><ion-icon name="logo-skype"></ion-icon></a>
+            </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+</body>
+</html>
